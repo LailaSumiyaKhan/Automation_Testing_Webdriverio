@@ -60,7 +60,7 @@ exports.config = {
    // Define all options that are relevant for the WebdriverIO instance here
    //
    // Level of logging verbosity: trace | debug | info | warn | error | silent
-   logLevel: "error",
+   logLevel: "info",
    //
    // Set specific log levels per logger
    // loggers:
@@ -84,7 +84,7 @@ exports.config = {
    // with `/`, the base url gets prepended, not including the path portion of your baseUrl.
    // If your `url` parameter starts without a scheme or `/` (like `some/path`), the base url
    // gets prepended directly.
-   // baseUrl: 'http://localhost:8080',
+   baseUrl: "https://demo.evershop.io/",
    //
    // Default timeout for all waitFor* commands.
    waitforTimeout: 10000,
@@ -175,8 +175,10 @@ exports.config = {
     * @param {Array.<String>} specs List of spec file paths that are to be run
     * @param {string} cid worker id (e.g. 0-0)
     */
-   // beforeSession: function (config, capabilities, specs, cid) {
-   // },
+   beforeSession: async function (config, capabilities, specs, cid) {
+      await browser.maximizeWindow();
+      await browser.url(this.baseUrl);
+   },
    /**
     * Gets executed before test execution begins. At this point you can access to all global
     * variables like `browser`. It is the perfect place to define custom commands.
@@ -197,8 +199,10 @@ exports.config = {
     * Hook that gets executed before the suite starts
     * @param {object} suite suite details
     */
-   // beforeSuite: function (suite) {
-   // },
+   beforeSuite: async function (suite) {
+      await browser.maximizeWindow();
+      await browser.url(this.baseUrl);
+   },
    /**
     * Function to be executed before a test (in Mocha/Jasmine) starts.
     */
@@ -233,7 +237,8 @@ exports.config = {
     * Hook that gets executed after the suite has ended
     * @param {object} suite suite details
     */
-   // afterSuite: function (suite) {
+   //    afterSuite: async function (suite) {
+   //   await browser.quit();
    // },
    /**
     * Runs after a WebdriverIO command gets executed
