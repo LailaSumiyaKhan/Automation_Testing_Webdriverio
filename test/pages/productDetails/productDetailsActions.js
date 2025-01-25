@@ -1,3 +1,4 @@
+const Utilities = require("../../utility/utilities");
 const productDetailsObjects = require("./productDetailsObjects");
 class productDetailsActions {
    async selectProductFromList(productName) {
@@ -18,6 +19,14 @@ class productDetailsActions {
    async clickOnAddToCartButton() {
       await productDetailsObjects.addToCartButton.click();
       await browser.pause(2000);
+   }
+   async getSingleProductName() {
+      return await productDetailsObjects.singleProductName.getText();
+   }
+   async getSingleProductPrice() {
+      const productPrice =
+         await productDetailsObjects.singleProductPrice.getText();
+      return Utilities.textToNumber(productPrice);
    }
 }
 module.exports = new productDetailsActions();
