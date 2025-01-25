@@ -1,4 +1,4 @@
-# Evershop Product Purchase Journey Automation Test
+# Demo Evershop Product Purchase Journey Automation Test
 
 This repository contains an automated test script for verifying the product purchase journey on the Demo Evershop application. The script is written using JavaScript, WebdriverIO for browser automation, and Chai for assertions. The Allure reporting framework is integrated to generate detailed test reports.
 
