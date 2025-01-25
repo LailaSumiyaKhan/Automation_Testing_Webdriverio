@@ -109,6 +109,12 @@ const productColor = "Black";
 const productSize = "X";
 const qty = "2";
 ```
+## Report Preview
+
+### Summary
+![summary](screenshot/Allure_Report.png)
+
+![test_cases](screenshot/Allure_Report(test_cases).png)
 
 
 
