@@ -4,6 +4,10 @@ This repository contains an automated test script for verifying the product purc
 
 ---
 
+### Project Preview
+
+1. **Execution** - [Watch the video](https://youtu.be/Q_XnN2p6GQY)
+
 ## Project Structure
 
 ```
@@ -21,10 +25,10 @@ This repository contains an automated test script for verifying the product purc
 |-- README.md
 ```
 
-- **pages**: Contains reusable action modules for different pages (e.g., Home, Product Details, Cart).
-- **tests**: Contains test scripts for various scenarios.
-- **reports**: Stores Allure test results.
-- **README.md**: Documentation for the project.
+-  **pages**: Contains reusable action modules for different pages (e.g., Home, Product Details, Cart).
+-  **tests**: Contains test scripts for various scenarios.
+-  **reports**: Stores Allure test results.
+-  **README.md**: Documentation for the project.
 
 ---
 
@@ -32,21 +36,23 @@ This repository contains an automated test script for verifying the product purc
 
 Ensure you have the following installed:
 
-- Node.js
-- npm (comes with Node.js)
-- Allure report
+-  Node.js
+-  npm (comes with Node.js)
+-  Allure report
 
 ---
 
 ## Setup Instructions
 
 1. Clone the repository:
+
    ```bash
    git clone <repository-url>
    cd <repository-directory>
    ```
 
 2. Install dependencies:
+
    ```bash
    npm install
    ```
@@ -61,6 +67,7 @@ Ensure you have the following installed:
 ## Running Tests
 
 Execute the following command to run the test script:
+
 ```bash
 npm run wdio
 ```
@@ -70,6 +77,7 @@ npm run wdio
 ## Generating Allure Report
 
 1. Run the tests and generate the Allure results:
+
    ```bash
    npm run wdio
    ```
@@ -86,16 +94,19 @@ The report will open in your default browser and provide detailed insights into 
 ## Test Scenarios Covered
 
 1. **Search with a Valid Product**
-   - Searches for a product and ensures the results are displayed correctly.
+
+   -  Searches for a product and ensures the results are displayed correctly.
 
 2. **Add Product to Cart**
-   - Selects a product, customizes options (size, color, quantity), and adds it to the cart.
+
+   -  Selects a product, customizes options (size, color, quantity), and adds it to the cart.
 
 3. **Verify Product Name in Cart Page**
-   - Confirms that the product added to the cart matches the selected product.
+
+   -  Confirms that the product added to the cart matches the selected product.
 
 4. **Verify Grand Total Price in Cart Page**
-   - Validates that the calculated grand total price in the cart matches the expected value.
+   -  Validates that the calculated grand total price in the cart matches the expected value.
 
 ---
 
@@ -109,12 +120,11 @@ const productColor = "Black";
 const productSize = "X";
 const qty = "2";
 ```
+
 ## Report Preview
 
 ### Summary
+
 ![summary](screenshot/Allure_Report.png)
 
-![test_cases](screenshot/Allure_Report(test_cases).png)
-
-
-
+![test_cases](<screenshot/Allure_Report(test_cases).png>)
